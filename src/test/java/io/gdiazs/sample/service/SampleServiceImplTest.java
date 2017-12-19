@@ -47,7 +47,7 @@ public class SampleServiceImplTest {
 		
 		List<Sample> samplesActual= sampleService.findWithSomeBussinesRule();
 		
-		verify(sampleService.findWithSomeBussinesRule(), atLeastOnce());
+		verify(sampleDAO, atLeastOnce()).findAll();
 		
 		Assert.assertTrue(samplesActual.size() == 1);
 	
